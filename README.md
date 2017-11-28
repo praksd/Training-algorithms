@@ -4,6 +4,6 @@ q1.py refers to question 1 and so on.
 
 All codes are written in python
 
-train and test files are given in Test folder.
+train and test files are given for each question
 
 checker.py files are just to check the correct format of the output!
