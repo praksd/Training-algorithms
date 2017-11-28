@@ -1,0 +1,56 @@
+QUESTION - 1
+
+Accuracy : 0.999
+Reasoning   : Since all the test data is linearly seperable and the algorithms are efficient enough to gain such accuracy.
+
+QUESTION - 2
+
+The accuracies for epochs greater than around 500 is always around 0.999999.
+So to modify the regular preceptron with decent, I've used learning rate decay method which is basically used to speed up our algorithm while slowly reducing the learning rate over time. This way, as per the requirement of the question, even though in the last few samples/sample the weight vector updates, it won't cause much difference to it, and would work still fine on the rest of the data. 
+the followinf formula has been used for changing the learning rate (eta)
+
+n = n0/ (1+ d0 * epoch_no)
+where n0 and d0 are hyperparameters and are set seeing the accuracy on the validation data. 
+
+QUESTION - 4
+
+For all the k's from a range of 5 - 15, the accuracy comes out to be around 70%.
+k = 15
+Confusion matrix :
+ [ 0.  1.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  1.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  1.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  1.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  1.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  1.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.  1.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.  0.  1.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.  1.  0.  0.  0.]
+ [ 0.  0.  1.  0.  0.  0.  0.  0.  0.  0.]
+
+k = 5
+Confusion matrix :
+ [ 0.  1.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  1.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  1.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  1.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  1.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  1.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.  1.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.  0.  1.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.  1.  0.  0.  0.]
+ [ 0.  0.  1.  0.  0.  0.  0.  0.  0.  0.]
+
+k= 10
+Confusion matrix :
+ [ 0.  1.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  1.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  1.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  1.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  1.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  1.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.  1.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.  0.  1.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.  1.  0.  0.  0.]
+ [ 0.  0.  1.  0.  0.  0.  0.  0.  0.  0.]
+
