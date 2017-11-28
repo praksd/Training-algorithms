@@ -12,6 +12,7 @@ the followinf formula has been used for changing the learning rate (eta)
 n = n0/ (1+ d0 * epoch_no)
 where n0 and d0 are hyperparameters and are set seeing the accuracy on the validation data. 
 
+
 QUESTION - 4
 
 For all the k's from a range of 5 - 15, the accuracy comes out to be around 70%.
